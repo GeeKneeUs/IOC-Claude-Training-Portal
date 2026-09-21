@@ -392,8 +392,34 @@
           <tr><td><code>CLAUDE.md</code></td><td>Also a .md file, but this one is for Claude, not you. It reads it at the start of every session: who you are, what rules to follow, where everything is.</td></tr>
           <tr><td><code>01 Context</code> <span class="dim">folder</span></td><td>What Claude knows about you: your role, your priorities, the people you work with, decisions that have been made, and a <code>Reference</code> folder for background material — including this training.</td></tr>
           <tr><td><code>02 Projects</code> <span class="dim">folder</span></td><td>Everywhere your work lives, sorted into four folders: <code>Automations</code>, <code>Knowledge Bases</code>, <code>Artefacts</code>, <code>Apps</code>. Module 04 covers this in full.</td></tr>
-          <tr><td><code>03 Archive</code> <span class="dim">folder</span></td><td>Old work brought in from before you had this Workspace, kept exactly as it arrived. Read only.</td></tr>
+          <tr><td><code>03 Archive</code> <span class="dim">folder</span></td><td>Old work brought in from before you had this Workspace, kept exactly as it arrived. Read only — bring things in with <code>/archive-intake</code>, work on a copy with <code>/migrate-project</code>. See Module 03.</td></tr>
           <tr><td><code>.claude</code> <span class="dim">folder</span></td><td>The engine room: the rules and skills that make Claude behave consistently. You never need to open this.</td></tr>
+        </table>
+
+        <h2 class="sec"><span class="n">03</span> What CLAUDE.md actually tells Claude</h2>
+        <p><code>CLAUDE.md</code> is the file Claude reads first, every single session. Two things in it are worth knowing about, because they explain why Claude behaves the way it does.</p>
+
+        <p><strong>There are two kinds of session.</strong> Open your main <code>Workspace</code> folder, and Claude acts as your assistant generally — your context, your diary, your people, any of your projects. Open a project's own folder instead (somewhere under <code>02 Projects\</code>), and Claude works specifically on that project, reading its own README and rules as well. Either way, Claude still knows who you are — your context files are the same.</p>
+
+        <p><strong>It lists six rules to follow, every session:</strong></p>
+        <table>
+          <tr><th>Rule file</th><th>What it governs</th></tr>
+          <tr><td><code>communication-style.md</code></td><td>How Claude writes to you, and on your behalf — tone, length, what to avoid.</td></tr>
+          <tr><td><code>accuracy.md</code></td><td>Never invent facts. Say where information came from. Call out priorities rather than letting things drift.</td></tr>
+          <tr><td><code>technical-writing.md</code></td><td>Plain, unambiguous English for anything technical — procedures, work instructions, engineering reports.</td></tr>
+          <tr><td><code>microsoft-365.md</code></td><td>How the Microsoft 365 connector is used, and the drafts-never-send rule from Module 06.</td></tr>
+          <tr><td><code>design-system.md</code></td><td>Which of the two brand systems applies — internal material versus the public website.</td></tr>
+          <tr><td><code>workspace.md</code></td><td>How this folder is organised, and how Claude keeps it that way as it grows.</td></tr>
+        </table>
+        <p>None of these need reading in full — they're what make Claude consistent for everyone, whoever opens the folder.</p>
+
+        <h2 class="sec"><span class="n">04</span> Words you will see</h2>
+        <table>
+          <tr><th>Word</th><th>Means</th></tr>
+          <tr><td>Skill</td><td>A saved way of doing a job. Run one by typing <code>/</code> and its name.</td></tr>
+          <tr><td>Rule</td><td>A standing instruction Claude follows in every session — the six listed above.</td></tr>
+          <tr><td>Context</td><td>The files in <code>01 Context\</code>. What Claude knows about you.</td></tr>
+          <tr><td>Memory</td><td>Small things Claude noted for itself between sessions. Lives in <code>.claude\memory\</code>.</td></tr>
         </table>
 
         <div class="quote"><p>None of the six training modules are a step in setup, and nobody is walked through them during onboarding. They are here from day one, ready whenever they're wanted.</p></div>
