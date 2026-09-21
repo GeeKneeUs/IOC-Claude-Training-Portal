@@ -296,6 +296,7 @@
         <button class="nav-item mod" data-route="m4"><span class="num">04</span><span>Starting a new project</span><span class="check" data-check="m4"></span></button>
         <button class="nav-item mod" data-route="m5"><span class="num">05</span><span>Claude vs Claude Code</span><span class="check" data-check="m5"></span></button>
         <button class="nav-item mod" data-route="m6"><span class="num">06</span><span>Day-to-day best practice</span><span class="check" data-check="m6"></span></button>
+        <button class="nav-item mod" data-route="m7"><span class="num">07</span><span>Claude, the absolute basics</span><span class="check" data-check="m7"></span></button>
       </div>
     </div>
 
@@ -315,10 +316,10 @@
         <p class="dek">Your self-paced reference for using your own AIS-OS Workspace. Work through Getting started once, then dip into the Reference modules whenever a question comes up — your progress is saved as you go.</p>
 
         <div class="stat-row">
-          <div class="stat"><div class="num">6</div><div class="label">reference modules</div></div>
+          <div class="stat"><div class="num">7</div><div class="label">reference modules</div></div>
           <div class="stat"><div class="num alt">1</div><div class="label">workspace, all yours</div></div>
           <div class="stat"><div class="num">4</div><div class="label">project types</div></div>
-          <div class="stat"><div class="num alt" id="statComplete">0/6</div><div class="label">your modules complete</div></div>
+          <div class="stat"><div class="num alt" id="statComplete">0/7</div><div class="label">your modules complete</div></div>
         </div>
 
         <p>This site is built to give you the same overview whoever you are — Admin, Supervisor, Engineer or Manager. It walks alongside your actual Workspace folder rather than replacing it: nothing here is required reading before you can use Claude, it is here for when a question comes up.</p>
@@ -343,6 +344,7 @@
             <div class="mod-card" data-route="m4"><span class="n">04</span><span class="t"><strong>Starting a new project</strong><span>The four project types, and how to create, switch and keep working on one</span></span><span class="chk" data-check="m4"></span></div>
             <div class="mod-card" data-route="m5"><span class="n">05</span><span class="t"><strong>Claude vs Claude Code</strong><span>The difference, and which to use when</span></span><span class="chk" data-check="m5"></span></div>
             <div class="mod-card" data-route="m6"><span class="n">06</span><span class="t"><strong>Day-to-day best practice</strong><span>Drafts never send, wrap-up, memory</span></span><span class="chk" data-check="m6"></span></div>
+            <div class="mod-card" data-route="m7"><span class="n">07</span><span class="t"><strong>Claude, the absolute basics</strong><span>Tabs, opening a folder, seeing files, switching sessions</span></span><span class="chk" data-check="m7"></span></div>
           </div>
         </div>
 
@@ -693,6 +695,82 @@
 
         <div class="module-nav">
           <a data-route="m5" href="javascript:void(0)">← Module 05: Claude vs Claude Code</a>
+          <a class="next" data-route="m7" href="javascript:void(0)">Module 07: Claude, the absolute basics →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 7 -->
+    <section class="view" id="view-m7">
+      <div class="wrap">
+        <p class="crumb">Reference / 07 — Claude, the absolute basics</p>
+        <div class="page-head">
+          <div>
+            <h1>Claude, the absolute basics</h1>
+            <p class="dek">Not about your Workspace — about Claude itself. Tabs, opening a folder, seeing files, switching conversations, and the settings worth knowing early.</p>
+          </div>
+          <div class="head-actions">
+            <button class="btn primary" data-complete="m7">Mark complete</button>
+            <div class="row">
+              <button class="btn ghost small" data-listen="m7"><span class="ic">🔊</span>Listen</button>
+              <button class="btn ghost small" data-slides="m7"><span class="ic">▤</span>View as slides</button>
+            </div>
+          </div>
+        </div>
+        <div class="pills"><span class="pill accent">Reference</span><span class="pill">3 min read</span></div>
+
+        <div class="callout">
+          <div class="dot">?</div>
+          <div>
+            <strong>Sourced from Claude Code's official documentation</strong>
+            <p>Verify menu wording and keyboard shortcuts against your own app before treating this as gospel — UI details change between versions.</p>
+          </div>
+        </div>
+
+        <h2 class="sec"><span class="n">01</span> Three tabs, three different things</h2>
+        <p>Claude's desktop app has three tabs, and mixing them up is the most common beginner confusion.</p>
+        <table>
+          <tr><th>Tab</th><th>What it is</th><th>Use it for</th></tr>
+          <tr><td>Chat</td><td>A conversation, like claude.ai. No access to your files.</td><td>Quick questions, drafting, thinking something through.</td></tr>
+          <tr><td>Cowork</td><td>An agent that runs in the background, in its own sandboxed space, separate from what you're doing.</td><td>Longer, independent jobs you kick off and check back on later.</td></tr>
+          <tr><td>Code</td><td>Claude working directly inside a folder on your machine — reads and writes files, runs skills.</td><td>Everything in this training. Your Workspace lives here.</td></tr>
+        </table>
+        <p>Everything in this training is about the <strong>Code</strong> tab specifically. When something says "open Claude Code," it means: open the desktop app, click <strong>Code</strong>.</p>
+
+        <h2 class="sec"><span class="n">02</span> Opening your Workspace folder</h2>
+        <ol>
+          <li>Open the Claude desktop app.</li>
+          <li>Click the <strong>Code</strong> tab.</li>
+          <li>Click <strong>Select folder</strong> and choose your <code>Workspace</code> folder.</li>
+          <li>If asked whether to run it locally or in the cloud, choose <strong>local</strong>.</li>
+        </ol>
+
+        <h2 class="sec"><span class="n">03</span> Seeing what files you actually have</h2>
+        <p>This is the part that catches people out: <strong>Claude Code does not show a permanent list of files down the side</strong>, the way some other software does. It is conversation driven — you ask, and Claude works with the files as it goes.</p>
+        <p>To see what's in a folder, you can:</p>
+        <ul>
+          <li>Just ask: "what files are in this folder?" — Claude will tell you.</li>
+          <li>Click a file path when Claude mentions one in its answer — it opens in a panel on the right for you to look at.</li>
+          <li>Or open the folder in Windows Explorer, exactly as you would any other folder — that always works, separately from Claude entirely.</li>
+        </ul>
+
+        <h2 class="sec"><span class="n">04</span> Switching between conversations</h2>
+        <p>If you have more than one conversation open — say, one for your main Workspace and another for a specific project — they show as a list in a sidebar. Click one to switch to it. There are also keyboard shortcuts to cycle between them.</p>
+
+        <h2 class="sec"><span class="n">05</span> Settings worth knowing early</h2>
+        <p>You do not need to learn every setting Claude has. A handful are worth knowing from day one:</p>
+        <table>
+          <tr><th>Setting</th><th>What it does</th></tr>
+          <tr><td>Permission mode</td><td>How much Claude can do without asking you first — from asking before every change, up to handling routine things itself.</td></tr>
+          <tr><td>Model</td><td>Which underlying Claude model is doing the work. Affects speed and capability.</td></tr>
+          <tr><td>Theme</td><td>Light or dark mode. Convenience only.</td></tr>
+        </table>
+        <p>Everything else — environment variables, advanced project settings, anything called "managed" or organisation-level — is not a day-one concern. Ignore it until you have a specific reason to look.</p>
+
+        <div class="quote"><p>That's genuinely the basics. Everything else in this training assumes you can now open your Workspace, see its files, and find your way back to a conversation you had before.</p></div>
+
+        <div class="module-nav">
+          <a data-route="m6" href="javascript:void(0)">← Module 06: Day-to-day best practice</a>
           <a class="next" data-route="home" href="javascript:void(0)">Back to home →</a>
         </div>
 
@@ -720,15 +798,16 @@
 
 <script>
 (function(){
-  var routes = ['home','structure','m1','m2','m3','m4','m5','m6'];
-  var moduleIds = ['m1','m2','m3','m4','m5','m6'];
+  var routes = ['home','structure','m1','m2','m3','m4','m5','m6','m7'];
+  var moduleIds = ['m1','m2','m3','m4','m5','m6','m7'];
   var moduleTitles = {
     m1:'01 — Welcome, and how this all fits together',
     m2:'02 — Getting set up',
     m3:'03 — The skills available',
     m4:'04 — Starting a new project',
     m5:'05 — Claude vs Claude Code',
-    m6:'06 — Day-to-day best practice'
+    m6:'06 — Day-to-day best practice',
+    m7:'07 — Claude, the absolute basics'
   };
 
   var storage = { get:function(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
@@ -765,8 +844,14 @@
         "Drafts never send. Anything client facing, an email, a Teams message, stops at a draft. A human approves it before it leaves. That's not a setting you can turn off. " +
         "Wrap-up discipline matters. Run slash wrap-up at the end of a session: it updates the project, logs any decisions, updates your priorities and commitments, and gives you a short report of what happened and what's still open. " +
         "On memory: it's for small working facts, a tool quirk, a preference, a path that took effort to find. It is not for durable facts, those go in your context files, or in a project's own README. " +
-        "And keeping context honest: priorities update when they genuinely change. Decisions get logged and never edited. If something contradicts what was written before, it gets written as, quote, now X, previously Y, unquote, never silently overwritten. " +
-        "That's the training programme so far. It's a work in progress, come back to any module, any time."
+        "And keeping context honest: priorities update when they genuinely change. Decisions get logged and never edited. If something contradicts what was written before, it gets written as, quote, now X, previously Y, unquote, never silently overwritten.",
+    m7: "This one is not about your Workspace, it's about Claude itself, the application. If you've never used it before, a few things are not obvious at first. " +
+        "Claude's desktop app has three tabs, and they do genuinely different jobs. Chat is a conversation, like claude dot A I, with no access to your files, good for quick questions and drafting. Cowork is an agent that runs in the background, in its own sandboxed space, separate from what you're doing, good for longer independent jobs you check back on later. And Code is Claude working directly inside a folder on your machine, reading and writing files, running skills, this is where your Workspace lives, and where everything in this training happens. " +
+        "To open your Workspace: open the Claude desktop app, click the Code tab, click select folder, and choose your Workspace folder. If asked whether to run it locally or in the cloud, choose local. " +
+        "Here's the part that catches people out: Claude Code does not show a permanent list of files down the side, the way some other software does. It's conversation driven, you ask, and Claude works with the files as it goes. You can just ask what files are in this folder, click a file path when Claude mentions one, or open the folder in Windows Explorer separately. " +
+        "If you have more than one conversation open, they show as a list in a sidebar, and there are keyboard shortcuts to cycle between them. " +
+        "A handful of settings are worth knowing from day one: permission mode, which controls how much Claude can do without asking you first; model, which affects speed and capability; and theme, which is just light or dark mode. Everything else can wait until you have a specific reason to look at it. " +
+        "That's genuinely the basics. Everything else in this training assumes you can now open your Workspace, see its files, and find your way back to a conversation you had before."
   };
 
   // Slide content per module, matching the branded .pptx decks already built for this training programme.
@@ -821,6 +906,15 @@
       { h:'Wrap-up discipline', bullets:['Run /wrap-up at the end of a session','Updates the project, logs decisions, updates priorities and commitments'] },
       { h:'What memory is, and isn’t, for', bullets:['Memory: small working facts, a tool quirk, a hard-won path','Not memory: durable facts → 01 Context. Project facts → that project’s README.'] },
       { h:'Keeping context honest', bullets:['Priorities update when they change','Decisions get logged, never edited','Contradictions: “now X, previously Y”, never silently overwritten'] },
+      { h:'Next', bullets:['Module 07: Claude, the absolute basics'] }
+    ],
+    m7: [
+      { title:true, eyebrow:'Module 07', h:'Claude, the absolute basics', sub:'Not your Workspace — the application itself' },
+      { h:'Three tabs, three jobs', bullets:['Chat — a conversation, no file access','Cowork — a background agent in its own sandboxed space','Code — Claude working directly in a folder. This is where your Workspace lives.'] },
+      { h:'Opening your Workspace', bullets:['Open the desktop app → click Code → Select folder','Choose local if asked local vs. cloud'] },
+      { h:'Seeing your files', bullets:['No permanent file list down the side — it’s conversation driven','Ask Claude, click a file path, or use Windows Explorer'] },
+      { h:'Switching conversations', bullets:['Multiple conversations show as a list in a sidebar','Keyboard shortcuts exist to cycle between them'] },
+      { h:'Settings worth knowing early', bullets:['Permission mode — how much Claude does without asking','Model — speed and capability','Theme — light or dark, convenience only'] },
       { title:true, eyebrow:'That’s the programme so far', h:'Work in progress', sub:'Revisit any module, any time' }
     ]
   };
