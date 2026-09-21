@@ -722,8 +722,8 @@
         <div class="callout">
           <div class="dot">?</div>
           <div>
-            <strong>Sourced from Claude Code's official documentation</strong>
-            <p>Verify menu wording and keyboard shortcuts against your own app before treating this as gospel — UI details change between versions.</p>
+            <strong>Checked against the real app, not just documentation</strong>
+            <p>An earlier draft of this module relied on Claude Code's written documentation alone, and one section turned out to be flatly wrong — the documentation didn't even mention the file tree panel below. Everything here has since been checked against the actual Claude desktop app. Worth a second look yourself if anything seems off, since app details can still change between versions.</p>
           </div>
         </div>
 
@@ -746,13 +746,13 @@
         </ol>
 
         <h2 class="sec"><span class="n">03</span> Seeing what files you actually have</h2>
-        <p>This is the part that catches people out: <strong>Claude Code does not show a permanent list of files down the side</strong>, the way some other software does. It is conversation driven — you ask, and Claude works with the files as it goes.</p>
-        <p>To see what's in a folder, you can:</p>
-        <ul>
-          <li>Just ask: "what files are in this folder?" — Claude will tell you.</li>
-          <li>Click a file path when Claude mentions one in its answer — it opens in a panel on the right for you to look at.</li>
-          <li>Or open the folder in Windows Explorer, exactly as you would any other folder — that always works, separately from Claude entirely.</li>
-        </ul>
+        <p>Claude Code has a file tree panel — folders you can expand, a filter box to search by filename, the same structure you'd see in Windows Explorer.</p>
+        <ol>
+          <li>Click the menu icon, top left (☰).</li>
+          <li>Choose <strong>View</strong>.</li>
+          <li>Choose <strong>Files</strong>.</li>
+        </ol>
+        <p>You can also just ask: "what files are in this folder?" — Claude will tell you. Or open the folder in Windows Explorer, exactly as you would any other folder, separately from Claude entirely.</p>
 
         <h2 class="sec"><span class="n">04</span> Switching between conversations</h2>
         <p>If you have more than one conversation open — say, one for your main Workspace and another for a specific project — they show as a list in a sidebar. Click one to switch to it. There are also keyboard shortcuts to cycle between them.</p>
@@ -848,7 +848,7 @@
     m7: "This one is not about your Workspace, it's about Claude itself, the application. If you've never used it before, a few things are not obvious at first. " +
         "Claude's desktop app has three tabs, and they do genuinely different jobs. Chat is a conversation, like claude dot A I, with no access to your files, good for quick questions and drafting. Cowork is an agent that runs in the background, in its own sandboxed space, separate from what you're doing, good for longer independent jobs you check back on later. And Code is Claude working directly inside a folder on your machine, reading and writing files, running skills, this is where your Workspace lives, and where everything in this training happens. " +
         "To open your Workspace: open the Claude desktop app, click the Code tab, click select folder, and choose your Workspace folder. If asked whether to run it locally or in the cloud, choose local. " +
-        "Here's the part that catches people out: Claude Code does not show a permanent list of files down the side, the way some other software does. It's conversation driven, you ask, and Claude works with the files as it goes. You can just ask what files are in this folder, click a file path when Claude mentions one, or open the folder in Windows Explorer separately. " +
+        "Claude Code has a file tree panel: folders you can expand, and a filter box to search by filename, much like Windows Explorer. To open it: click the menu icon, top left, choose View, then choose Files. You can also just ask Claude what files are in a folder, or open it in Windows Explorer separately. " +
         "If you have more than one conversation open, they show as a list in a sidebar, and there are keyboard shortcuts to cycle between them. " +
         "A handful of settings are worth knowing from day one: permission mode, which controls how much Claude can do without asking you first; model, which affects speed and capability; and theme, which is just light or dark mode. Everything else can wait until you have a specific reason to look at it. " +
         "That's genuinely the basics. Everything else in this training assumes you can now open your Workspace, see its files, and find your way back to a conversation you had before."
@@ -912,7 +912,7 @@
       { title:true, eyebrow:'Module 07', h:'Claude, the absolute basics', sub:'Not your Workspace — the application itself' },
       { h:'Three tabs, three jobs', bullets:['Chat — a conversation, no file access','Cowork — a background agent in its own sandboxed space','Code — Claude working directly in a folder. This is where your Workspace lives.'] },
       { h:'Opening your Workspace', bullets:['Open the desktop app → click Code → Select folder','Choose local if asked local vs. cloud'] },
-      { h:'Seeing your files', bullets:['No permanent file list down the side — it’s conversation driven','Ask Claude, click a file path, or use Windows Explorer'] },
+      { h:'Seeing your files', bullets:['A file tree panel: expandable folders, a filter box — like Windows Explorer','Open it: menu icon (top left) → View → Files'] },
       { h:'Switching conversations', bullets:['Multiple conversations show as a list in a sidebar','Keyboard shortcuts exist to cycle between them'] },
       { h:'Settings worth knowing early', bullets:['Permission mode — how much Claude does without asking','Model — speed and capability','Theme — light or dark, convenience only'] },
       { title:true, eyebrow:'That’s the programme so far', h:'Work in progress', sub:'Revisit any module, any time' }
