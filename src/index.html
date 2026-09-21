@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Workspace training portal</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&family=Cambria&display=swap">
 <style>
   :root{
@@ -53,9 +54,9 @@
   a:focus-visible, button:focus-visible, input:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
 
   /* io-design-365: square corners everywhere. The only curve in the brand
-     is the pink icon disc and the round dot in the logo mark. */
+     is the pink icon disc and the round dot in the logo mark — both baked
+     into the real logo artwork (assets/logo.svg), not drawn in CSS. */
   *{ border-radius: 0 !important; }
-  .brand-dot{ border-radius: 50% !important; }
 
   .app{ display:flex; min-height:100%; }
 
@@ -67,14 +68,8 @@
     padding: 26px 20px 26px;
     display:flex; flex-direction:column; gap: 22px;
   }
-  .brand-mark{ display:flex; align-items:center; gap:9px; }
-  .brand-dot{
-    width:22px; height:22px; border-radius:50%;
-    background: var(--accent);
-    color:#fff; font-family: var(--font-head); font-weight:700; font-size:13px;
-    display:flex; align-items:center; justify-content:center; flex:0 0 auto;
-  }
-  .brand-name{ font-family: var(--font-head); font-weight:700; font-size:16px; letter-spacing:0.06em; color: var(--text-heading); text-transform:uppercase; }
+  .brand-mark{ display:flex; align-items:center; }
+  .brand-mark img{ height:22px; width:auto; display:block; }
   .brand-sub{ font-size: 12.5px; color: var(--text-secondary); padding-left: 31px; margin-top:-4px; }
 
 
@@ -275,7 +270,7 @@
 <div class="app">
   <aside class="sidebar">
     <div>
-      <div class="brand-mark"><span class="brand-dot">iO</span><span class="brand-name">IO Controls</span></div>
+      <div class="brand-mark"><img src="assets/logo.svg" alt="IO Controls" width="158" height="22"></div>
       <div class="brand-sub">Workspace training</div>
     </div>
 
