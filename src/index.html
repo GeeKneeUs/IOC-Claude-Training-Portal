@@ -292,6 +292,7 @@
         <button class="nav-item mod" data-route="m5"><span class="num">05</span><span>Claude vs Claude Code</span><span class="check" data-check="m5"></span></button>
         <button class="nav-item mod" data-route="m6"><span class="num">06</span><span>Day-to-day best practice</span><span class="check" data-check="m6"></span></button>
         <button class="nav-item mod" data-route="m7"><span class="num">07</span><span>Claude, the absolute basics</span><span class="check" data-check="m7"></span></button>
+        <button class="nav-item mod" data-route="m8"><span class="num">08</span><span>The Glitch Second Brain Kit</span><span class="check" data-check="m8"></span></button>
       </div>
     </div>
 
@@ -311,10 +312,10 @@
         <p class="dek">Your self-paced reference for using your own AIS-OS Workspace. Work through Getting started once, then dip into the Reference modules whenever a question comes up — your progress is saved as you go.</p>
 
         <div class="stat-row">
-          <div class="stat"><div class="num">7</div><div class="label">reference modules</div></div>
+          <div class="stat"><div class="num">8</div><div class="label">reference modules</div></div>
           <div class="stat"><div class="num alt">1</div><div class="label">workspace, all yours</div></div>
           <div class="stat"><div class="num">4</div><div class="label">project types</div></div>
-          <div class="stat"><div class="num alt" id="statComplete">0/7</div><div class="label">your modules complete</div></div>
+          <div class="stat"><div class="num alt" id="statComplete">0/8</div><div class="label">your modules complete</div></div>
         </div>
 
         <p>This site is built to give you the same overview whoever you are — Admin, Supervisor, Engineer or Manager. It walks alongside your actual Workspace folder rather than replacing it: nothing here is required reading before you can use Claude, it is here for when a question comes up.</p>
@@ -340,6 +341,7 @@
             <div class="mod-card" data-route="m5"><span class="n">05</span><span class="t"><strong>Claude vs Claude Code</strong><span>The difference, and which to use when</span></span><span class="chk" data-check="m5"></span></div>
             <div class="mod-card" data-route="m6"><span class="n">06</span><span class="t"><strong>Day-to-day best practice</strong><span>Drafts never send, wrap-up, memory</span></span><span class="chk" data-check="m6"></span></div>
             <div class="mod-card" data-route="m7"><span class="n">07</span><span class="t"><strong>Claude, the absolute basics</strong><span>Tabs, opening a folder, seeing files, switching sessions</span></span><span class="chk" data-check="m7"></span></div>
+            <div class="mod-card" data-route="m8"><span class="n">08</span><span class="t"><strong>The Glitch Second Brain Kit</strong><span>A third-party tool Nick is exploring — what it is, how it works</span></span><span class="chk" data-check="m8"></span></div>
           </div>
         </div>
 
@@ -766,6 +768,76 @@
 
         <div class="module-nav">
           <a data-route="m6" href="javascript:void(0)">← Module 06: Day-to-day best practice</a>
+          <a class="next" data-route="m8" href="javascript:void(0)">Module 08: The Glitch Second Brain Kit →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 8 -->
+    <section class="view" id="view-m8">
+      <div class="wrap">
+        <p class="crumb">Reference / 08 — The Glitch Second Brain Kit</p>
+        <div class="page-head">
+          <div>
+            <h1>The Glitch Second Brain Kit</h1>
+            <p class="dek">Not built by IO Controls — a third-party tool Nick is exploring. What it is, how it actually works, and ideas for how it might be used here.</p>
+          </div>
+          <div class="head-actions">
+            <button class="btn primary" data-complete="m8">Mark complete</button>
+            <div class="row">
+              <button class="btn ghost small" data-listen="m8"><span class="ic">🔊</span>Listen</button>
+              <button class="btn ghost small" data-slides="m8"><span class="ic">▤</span>View as slides</button>
+            </div>
+          </div>
+        </div>
+        <div class="pills"><span class="pill accent">Reference</span><span class="pill">4 min read</span></div>
+
+        <div class="callout">
+          <div class="dot">i</div>
+          <div>
+            <strong>Exploratory, not a decided process</strong>
+            <p>This is background on a tool Nick found and is trying out. Nothing here means IO Controls has adopted it.</p>
+          </div>
+        </div>
+
+        <h2 class="sec"><span class="n">01</span> What it is, and what it isn't</h2>
+        <p>A free, third-party kit for Obsidian plus Claude Code, by someone going by Professor Glitch. You drop things in — articles, notes, documents — and ask it questions. It files and links everything itself.</p>
+        <p>Not part of AIS-OS, not built by IO Controls or Newton. Licence: "yours to use and change, just don't sell it." The free kit is described by its own author as "the engine" — a fuller paid curriculum exists separately.</p>
+
+        <h2 class="sec"><span class="n">02</span> What it actually needs</h2>
+        <p><strong>Obsidian</strong> (free) — the folder is opened as a vault. <strong>WSL, on Windows</strong> — the session-start greeting needs a proper Linux-style terminal; everything else works without it. A real prerequisite, not a formality, before suggesting this to non-technical staff.</p>
+
+        <h2 class="sec"><span class="n">03</span> The mechanics</h2>
+        <p>Three folders: <code>raw/</code> holds every original source untouched. <code>wiki/topics/</code> holds pages the AI writes from those sources. <code>wiki/log.md</code> and <code>wiki/index.md</code> track what happened and map every page.</p>
+        <table>
+          <tr><th>Command</th><th>What it does</th></tr>
+          <tr><td><code>/setup</code></td><td>A wizard: three questions, then it builds the folders.</td></tr>
+          <tr><td><code>/ingest</code></td><td>Feed it a URL, pasted text, or a file dropped in <code>raw/inbox/</code>. Saves the original first, checks for duplicates, updates every affected wiki page, logs it.</td></tr>
+          <tr><td><code>/ask</code></td><td>Answers only from the wiki, never general knowledge, and cites which pages it used.</td></tr>
+          <tr><td><code>/lint</code></td><td>A periodic health check — re-verifies facts against the original source, flags contradictions, never fixes anything without asking first.</td></tr>
+        </table>
+
+        <h2 class="sec"><span class="n">04</span> The rules that make it trustworthy</h2>
+        <ul>
+          <li><strong>Raw is immutable</strong> — originals never touched, the wiki is entirely rebuildable from them.</li>
+          <li><strong>Provenance, every time</strong> — every fact labelled extracted or inferred.</li>
+          <li><strong>The honesty rule</strong> — thin evidence gets called "early signal," never dressed up as a finding.</li>
+          <li><strong>History is never rewritten</strong> — outdated claims get marked, not deleted.</li>
+        </ul>
+        <div class="quote"><p>Every one of these maps directly onto this workspace's own accuracy rule. The Glitch kit just enforces it more mechanically, with an actual health check that verifies the AI's own work against its sources.</p></div>
+
+        <h2 class="sec"><span class="n">05</span> How IO Controls might realistically use one</h2>
+        <ul>
+          <li>One customer site's history — fed with surveys, correspondence, past job sheets, asked things like "what BMS platform is on site" with an answer that cites the exact document.</li>
+          <li>Product knowledge across Distech, Cylon, Easy IO, Trend, Tridium and Niagara, queryable in one place.</li>
+        </ul>
+        <p>Worth knowing: IO Controls already has something in this spirit — the <code>job-history</code> skill, answering questions from an indexed Job History pulled from JobLogic. Compare against what that already does before duplicating effort.</p>
+
+        <h2 class="sec"><span class="n">06</span> Trying it yourself</h2>
+        <p>A working, untouched copy sits at <code>C:\Users\NICKG\Desktop\AIS-OS\Glitch Second Brain Sandbox\</code>, separate from the original. Open that folder directly (not this Workspace) in Claude Code to run its own <code>/setup</code>, <code>/ingest</code> and <code>/ask</code> commands first-hand.</p>
+
+        <div class="module-nav">
+          <a data-route="m7" href="javascript:void(0)">← Module 07: Claude, the absolute basics</a>
           <a class="next" data-route="home" href="javascript:void(0)">Back to home →</a>
         </div>
 
@@ -793,8 +865,8 @@
 
 <script>
 (function(){
-  var routes = ['home','structure','m1','m2','m3','m4','m5','m6','m7'];
-  var moduleIds = ['m1','m2','m3','m4','m5','m6','m7'];
+  var routes = ['home','structure','m1','m2','m3','m4','m5','m6','m7','m8'];
+  var moduleIds = ['m1','m2','m3','m4','m5','m6','m7','m8'];
   var moduleTitles = {
     m1:'01 — Welcome, and how this all fits together',
     m2:'02 — Getting set up',
@@ -802,7 +874,8 @@
     m4:'04 — Starting a new project',
     m5:'05 — Claude vs Claude Code',
     m6:'06 — Day-to-day best practice',
-    m7:'07 — Claude, the absolute basics'
+    m7:'07 — Claude, the absolute basics',
+    m8:'08 — The Glitch Second Brain Kit'
   };
 
   var storage = { get:function(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
@@ -846,7 +919,14 @@
         "Claude Code has a file tree panel: folders you can expand, and a filter box to search by filename, much like Windows Explorer. To open it: click the menu icon, top left, choose View, then choose Files. You can also just ask Claude what files are in a folder, or open it in Windows Explorer separately. " +
         "If you have more than one conversation open, they show as a list in a sidebar, and there are keyboard shortcuts to cycle between them. " +
         "A handful of settings are worth knowing from day one: permission mode, which controls how much Claude can do without asking you first; model, which affects speed and capability; and theme, which is just light or dark mode. Everything else can wait until you have a specific reason to look at it. " +
-        "That's genuinely the basics. Everything else in this training assumes you can now open your Workspace, see its files, and find your way back to a conversation you had before."
+        "That's genuinely the basics. Everything else in this training assumes you can now open your Workspace, see its files, and find your way back to a conversation you had before.",
+    m8: "This module is about a tool, not something built by IO Controls. It's a free kit called the Glitch Second Brain Kit, by someone going by Professor Glitch. Nick found it while scoping this training programme and wanted to understand how it works, and whether it's worth exploring here. Nothing in this module means IO Controls has adopted it, this is background, so you can judge it for yourself. " +
+        "It's a free, third-party tool for Obsidian plus Claude Code. You drop things into it, articles, notes, documents, and ask it questions. It does the filing and linking itself. Its licence is, quote, yours to use and change, just don't sell it, unquote. The free kit is described by its own author as the engine, a fuller paid curriculum exists separately. " +
+        "It needs two things beyond Claude Code: Obsidian, which is free, and on Windows, W S L, because its session greeting is a small script that needs a proper Linux-style terminal. Everything else works without that. " +
+        "The mechanics: a folder called raw holds every original source, kept exactly as it arrived, never edited. A folder called wiki holds pages the AI writes and maintains, built from what's in raw. Slash setup is a short wizard that builds the folders. Slash ingest feeds it something, a URL, pasted text, or a dropped file, and it saves the original first, checks it isn't a duplicate, updates every wiki page that's actually affected, and logs what it did. Slash ask answers only from the wiki, never from general knowledge, and cites which pages it used. And slash lint is a periodic health check that re-verifies every fact against the original source and never applies a fix without asking first. " +
+        "The rules that make it trustworthy: raw is immutable, so nothing is ever lost to an editing mistake. Every fact is labelled extracted, meaning it's genuinely in the source, or inferred, meaning the AI worked it out. With thin evidence it has to say early signal, never dress up a guess as a finding. And history is never rewritten, an outdated claim gets marked as superseded, not silently deleted. Every one of these maps directly onto this workspace's own accuracy rule, the Glitch kit just enforces it more mechanically. " +
+        "As for how IO Controls might realistically use one: one idea is a single customer site's history, fed with surveys and correspondence and past job sheets, and asked questions with an answer that cites the exact document. Another is product knowledge across Distech, Cylon, Easy IO, Trend, Tridium and Niagara, queryable in one place. Worth knowing, IO Controls already has something in this spirit, the job-history skill, answering questions from an indexed job history pulled from JobLogic, so compare against what that already does before duplicating effort. " +
+        "If you want to try it yourself, a working, untouched copy sits in a folder called Glitch Second Brain Sandbox on the desktop, separate from the original. Open that folder directly, not this Workspace, in Claude Code, to run its own setup, ingest and ask commands first-hand."
   };
 
   // Slide content per module, matching the branded .pptx decks already built for this training programme.
@@ -910,6 +990,15 @@
       { h:'Seeing your files', bullets:['A file tree panel: expandable folders, a filter box — like Windows Explorer','Open it: menu icon (top left) → View → Files'] },
       { h:'Switching conversations', bullets:['Multiple conversations show as a list in a sidebar','Keyboard shortcuts exist to cycle between them'] },
       { h:'Settings worth knowing early', bullets:['Permission mode — how much Claude does without asking','Model — speed and capability','Theme — light or dark, convenience only'] },
+      { h:'Next', bullets:['Module 08: The Glitch Second Brain Kit'] }
+    ],
+    m8: [
+      { title:true, eyebrow:'Module 08', h:'The Glitch Second Brain Kit', sub:'A third-party tool — not built by IO Controls' },
+      { h:'What it is', bullets:['A free Obsidian + Claude Code kit — drop things in, ask questions','Not AIS-OS, not built by IO Controls or Newton','Licence: use and change it, just don’t sell it'] },
+      { h:'What it needs', bullets:['Obsidian (free)','WSL on Windows, for the full experience'] },
+      { h:'The mechanics', bullets:['raw/ — original sources, never edited','wiki/topics/ — AI-maintained pages built from raw/','/setup, /ingest, /ask, /lint'] },
+      { h:'What makes it trustworthy', bullets:['Raw is immutable','Every fact labelled extracted or inferred','Thin evidence called “early signal,” never a finding','History marked, never rewritten'] },
+      { h:'Realistic ideas here', bullets:['One customer site’s history, cited answers','Product knowledge across all six platforms','Compare first against the existing job-history skill'] },
       { title:true, eyebrow:'That’s the programme so far', h:'Work in progress', sub:'Revisit any module, any time' }
     ]
   };

@@ -11,10 +11,12 @@
 ## Purpose
 
 A standalone, URL-addressable training site for IO Controls staff using their own AIS-OS
-Workspace — setup steps, the folder structure, and six reference modules, each readable
+Workspace — setup steps, the folder structure, and eight reference modules, each readable
 as a page, a slide deck, or read aloud. Modelled on the existing
 [BMS Engineer Academy](https://geekneeus.github.io/bms-engineer-academy/) site. Started
 as a Claude Artifact prototype, moved here to become the real, hosted version.
+
+**Live:** https://geekneeus.github.io/IOC-Claude-Training-Portal/
 
 ## Who uses it and what it must do
 
@@ -79,8 +81,23 @@ Shape of the file:
 
 ## Background
 
-_Facts carried over from earlier work, with dates and sources._
+Repo: [GeeKneeUs/IOC-Claude-Training-Portal](https://github.com/GeeKneeUs/IOC-Claude-Training-Portal),
+public, deployed via GitHub Actions on every push to `main` — no manual Pages rebuild
+needed. Content built from the
+[AIS-OS Training Programme](../../Knowledge%20Bases/AIS-OS%20Training%20Programme/README.md)
+knowledge base, but has since diverged from it (see that project's own Open questions).
 
 ## Open questions
 
-_None yet._
+- Content in `src\index.html` has been corrected directly in several places (inclusive
+  language, the file-tree panel, "Workspace" as the folder's name, the real IO Controls
+  logo) — none of these fixes have been carried back into the knowledge base entries or
+  the separate `.pptx` decks (see those projects' own README files).
+- Session-switching keyboard shortcuts in Module 07 are still unconfirmed against the
+  real Claude desktop app.
+- The template's SharePoint distribution location is still not set up (a separate,
+  earlier piece of work — see `IO Controls Workspace Template` on the Desktop, outside
+  this workspace).
+- GitHub Pages deploys have been taking 5–6 minutes on the actual publish step rather
+  than the usual well under a minute — worth watching if it keeps happening, but nothing
+  actionable found so far; it's on GitHub's side, not this repo's workflow.
