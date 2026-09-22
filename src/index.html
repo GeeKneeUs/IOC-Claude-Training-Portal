@@ -842,6 +842,16 @@
         <h2 class="sec"><span class="n">06</span> Trying it yourself</h2>
         <p>A working, untouched copy sits at <code>C:\Users\NICKG\Desktop\AIS-OS\Glitch Second Brain Sandbox\</code>, separate from the original. Open that folder directly (not this Workspace) in Claude Code to run its own <code>/setup</code>, <code>/ingest</code> and <code>/ask</code> commands first-hand.</p>
 
+        <h2 class="sec"><span class="n">07</span> Video lessons, by Professor Glitch</h2>
+        <p>Three short videos, about 30 minutes total, on the OneDrive rather than embedded here — the kit's own licence says "yours to watch, just don't sell them or post them publicly," so they're referenced, not uploaded to this public site.</p>
+        <table>
+          <tr><th>#</th><th>Covers</th><th>Length</th></tr>
+          <tr><td>1</td><td>Why every note-taking system dies, and what an AI-maintained brain actually is</td><td>6:43</td></tr>
+          <tr><td>2</td><td>The architecture: immutable sources, a rebuildable wiki, and the rules that keep it honest</td><td>14:02</td></tr>
+          <tr><td>3</td><td>A full build on screen: point Claude Code at the folder, ingest a real source, ask a real question</td><td>9:24</td></tr>
+        </table>
+        <p>Find them at: <code>OneDrive - IO Controls Ltd\Documents\05.Tech_Ref\01.IOC\AI\glitch-second-brain-kit\glitch-second-brain-kit\lessons\</code>. Plain MP4 — plays in anything.</p>
+
         <div class="module-nav">
           <a data-route="m7" href="javascript:void(0)">← Module 07: Claude, the absolute basics</a>
           <a class="next" data-route="home" href="javascript:void(0)">Back to home →</a>
@@ -932,7 +942,8 @@
         "The mechanics: a folder called raw holds every original source, kept exactly as it arrived, never edited. A folder called wiki holds pages the AI writes and maintains, built from what's in raw. Slash setup is a short wizard that builds the folders. Slash ingest feeds it something, a URL, pasted text, or a dropped file, and it saves the original first, checks it isn't a duplicate, updates every wiki page that's actually affected, and logs what it did. Slash ask answers only from the wiki, never from general knowledge, and cites which pages it used. And slash lint is a periodic health check that re-verifies every fact against the original source and never applies a fix without asking first. " +
         "The rules that make it trustworthy: raw is immutable, so nothing is ever lost to an editing mistake. Every fact is labelled extracted, meaning it's genuinely in the source, or inferred, meaning the AI worked it out. With thin evidence it has to say early signal, never dress up a guess as a finding. And history is never rewritten, an outdated claim gets marked as superseded, not silently deleted. Every one of these maps directly onto this workspace's own accuracy rule, the Glitch kit just enforces it more mechanically. " +
         "As for how IO Controls might realistically use one: one idea is a single customer site's history, fed with surveys and correspondence and past job sheets, and asked questions with an answer that cites the exact document. Another is product knowledge across Distech, Cylon, Easy IO, Trend, Tridium and Niagara, queryable in one place. Worth knowing, IO Controls already has something in this spirit, the job-history skill, answering questions from an indexed job history pulled from JobLogic, so compare against what that already does before duplicating effort. " +
-        "If you want to try it yourself, a working, untouched copy sits in a folder called Glitch Second Brain Sandbox on the desktop, separate from the original. Open that folder directly, not this Workspace, in Claude Code, to run its own setup, ingest and ask commands first-hand."
+        "If you want to try it yourself, a working, untouched copy sits in a folder called Glitch Second Brain Sandbox on the desktop, separate from the original. Open that folder directly, not this Workspace, in Claude Code, to run its own setup, ingest and ask commands first-hand. " +
+        "There are also three short video lessons by Professor Glitch, about thirty minutes total, on the OneDrive rather than on this page, since the kit's own licence says they're yours to watch but not to post publicly. Look on the page itself for exactly where they are."
   };
 
   // Slide content per module, matching the branded .pptx decks already built for this training programme.
@@ -1005,6 +1016,7 @@
       { h:'The mechanics', bullets:['raw/ — original sources, never edited','wiki/topics/ — AI-maintained pages built from raw/','/setup, /ingest, /ask, /lint'] },
       { h:'What makes it trustworthy', bullets:['Raw is immutable','Every fact labelled extracted or inferred','Thin evidence called “early signal,” never a finding','History marked, never rewritten'] },
       { h:'Realistic ideas here', bullets:['One customer site’s history, cited answers','Product knowledge across all six platforms','Compare first against the existing job-history skill'] },
+      { h:'Video lessons (not uploaded here)', bullets:['Three videos, ~30 min total, by Professor Glitch','Licence: yours to watch, not to post publicly','On OneDrive: …\\AI\\glitch-second-brain-kit\\glitch-second-brain-kit\\lessons\\'] },
       { title:true, eyebrow:'That’s the programme so far', h:'Work in progress', sub:'Revisit any module, any time' }
     ]
   };
